@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Four in a Row:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Four_in_a_Row_jar</output-path>
+    <root id="archive" name="Four in a Row.jar">
+      <element id="module-output" name="Four in a Row" />
+    </root>
+  </artifact>
+</component>
