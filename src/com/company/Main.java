@@ -1,4 +1,9 @@
 package com.company;
+/* Ivan Freeman
+   13 January 2022
+   The purpose of this program is to get a 2d array of integers from the user, see if there are four integers of the
+   same value in a row, then print the results
+ */
 
 import java.util.Scanner;
 public class Main {
@@ -16,7 +21,7 @@ public class Main {
                 values[x][y] = sc.nextInt();
             }
         }
-        /* debuggings woah
+        /* debugging
         for(int[] x : values) {
             for (int y : x) {
                 System.out.print("[" + y + "]");
@@ -24,12 +29,16 @@ public class Main {
             System.out.println();
         }
         */
+
+        // finds out if there are four integers of the same value in a row, then prints the results
         if(isFour(values)){
-            System.out.println("true");
+            System.out.print("There is a four in a row!");
+        } else {
+            System.out.print("There unfortunately isn't a four in a row...");
         }
     }
     public static boolean isFour(int[][] values){
-        // check horizontally
+        // checks horizontally
         for (int row = 0; row<values.length; row++) {
             for (int column = 0; column < values[row].length; column++) {
                 /* debugging
@@ -45,7 +54,8 @@ public class Main {
                 }
             }
         }
-        // check vertically
+
+        // checks vertically
         for(int row=0;row<values.length;row++){
             for(int column=0;column<values[row].length;column++){
                 if((row+3) >= values.length){
@@ -55,7 +65,8 @@ public class Main {
                 }
             }
         }
-        //check diagonally right
+
+        //checks diagonally to the right
         for(int row=0;row<values.length;row++){
             for(int column=0;column<values[row].length;column++){
                 if((column + 3) >= values[row].length || (row+3) >= values.length){
@@ -65,7 +76,8 @@ public class Main {
                 }
             }
         }
-        // check diagonally left
+
+        // check diagonally to the left
         for(int row=0;row<values.length;row++){
             for(int column=values[row].length-1;column>=0;column--){
                 if((column - 3)  < 0 || (row+3) >= values.length){
