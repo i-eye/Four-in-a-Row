@@ -16,7 +16,7 @@ public class Main {
                 values[x][y] = sc.nextInt();
             }
         }
-        /* debugging
+        /* debuggings woah
         for(int[] x : values) {
             for (int y : x) {
                 System.out.print("[" + y + "]");
