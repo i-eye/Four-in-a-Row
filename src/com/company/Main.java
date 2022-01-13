@@ -32,9 +32,9 @@ public class Main {
 
         // finds out if there are four integers of the same value in a row, then prints the results
         if(isFour(values)){
-            System.out.print("There is a four in a row!");
+            System.out.print("There are four ints of the same value in a row!");
         } else {
-            System.out.print("There unfortunately isn't a four in a row...");
+            System.out.print("There unfortunately aren't four ints of the same value in a row...");
         }
     }
     public static boolean isFour(int[][] values){
